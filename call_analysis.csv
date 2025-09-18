@@ -1,0 +1,23 @@
+Transcript,Summary,Sentiment,Timestamp
+hiiiii,"Customer initiates a call with a greeting, but no specific issue or question is mentioned.",neutral,2025-09-18T20:02:43.466996
+hiiiii how are you,"Customer initiates a call with an informal greeting, but no specific issue or question is mentioned.",neutral
+bruh whats wrong with you,"Customer is expressing frustration or annoyance, but the reason is unclear.",negative
+bruh i got placedd!!,Customer expresses frustration and surprise at being placed on hold.,negative
+bro i got placed in amazon!!,"Customer is excited to be placed in Amazon, but the tone is casual and informal.",positive
+bro i got placed in amazon!!,The customer is excited to share that they have been placed in Amazon. The customer uses informal language to express their enthusiasm. The call is brief and to the point.,positive
+bruh i got placedd!!,"The customer expressed excitement about being placed, likely in a position or location they desired. The tone is informal, using colloquial language. The customer's statement is brief and lacks detail.",positive
+"Agent: Hello, thanks for calling CloudyBooking. How can I help?
+Customer: Hi — I booked a slot yesterday and payment failed on the site, but my card was charged twice.
+Agent: I'm sorry to hear that. Did you get a payment confirmation email?
+Customer: No, I didn't and support hasn't responded. I'm frustrated and need a refund.
+Agent: I'll escalate this immediately and ensure a refund is processed.
+Customer: Thank you.
+","A customer called CloudyBooking due to a payment issue where their card was charged twice for a booking, but they didn't receive a payment confirmation email. The agent apologized and offered to escalate the issue for a refund. The customer was frustrated but thanked the agent for the help.",negative
+"hii how are you
+","The customer initiates a call with a greeting, inquiring about the representative's well-being.",positive
+"hi how are you :(
+","The customer initiated a call with a greeting and expressed a potentially negative emotional state, indicated by the colon and parentheses at the end of their message. The customer's message is brief and lacks specific details about their concern. The call has just begun, and the customer's issue or question is not yet clear.",negative
+"hiiii how are you :(
+",The customer initiates a call with a greeting and expresses a potentially negative emotional state. The customer's message is brief and lacks specific details about their concern. The tone appears informal and casual.,negative
+"hiiii how are you :)
+","The customer initiates a call with a friendly greeting, inquiring about the representative's well-being. The tone is casual and welcoming. The conversation has just begun.",positive

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Transcript Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .error {
+            color: #d9534f;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Call Transcript Analyzer</h1>
+        <form id="analysisForm">
+            <label for="transcript">Enter Customer Call Transcript:</label><br>
+            <textarea id="transcript" name="transcript" required placeholder="Paste the call transcript here..."></textarea><br>
+            <button type="submit">Analyze</button>
+        </form>
+        
+        <div id="result" class="result" style="display: none;">
+            <h3>Analysis Results:</h3>
+            <p><strong>Original Transcript:</strong></p>
+            <p id="originalTranscript"></p>
+            <p><strong>Summary:</strong> <span id="summary"></span></p>
+            <p><strong>Sentiment:</strong> <span id="sentiment"></span></p>
+        </div>
+        
+        <div id="error" class="error" style="display: none;"></div>
+    </div>
+
+    <script>
+        document.getElementById('analysisForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const transcript = document.getElementById('transcript').value;
+            const resultDiv = document.getElementById('result');
+            const errorDiv = document.getElementById('error');
+            
+            // Hide previous results/errors
+            resultDiv.style.display = 'none';
+            errorDiv.style.display = 'none';
+            
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'transcript': transcript
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    // Display results
+                    document.getElementById('originalTranscript').textContent = data.transcript;
+                    document.getElementById('summary').textContent = data.summary;
+                    document.getElementById('sentiment').textContent = data.sentiment;
+                    resultDiv.style.display = 'block';
+                } else {
+                    // Display error
+                    errorDiv.textContent = data.error || 'An error occurred';
+                    errorDiv.style.display = 'block';
+                }
+            } catch (error) {
+                errorDiv.textContent = 'Network error: ' + error.message;
+                errorDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
