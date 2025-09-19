@@ -32,7 +32,7 @@ def analyze_transcript(transcript: str):
 
     try:
         completion = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",  # ✅ recommended model
+            model="llama-3.3-70b-versatile",  
             messages=[
                 {
                     "role": "system",

@@ -21,3 +21,10 @@ Customer: Thank you.
 ",The customer initiates a call with a greeting and expresses a potentially negative emotional state. The customer's message is brief and lacks specific details about their concern. The tone appears informal and casual.,negative
 "hiiii how are you :)
 ","The customer initiates a call with a friendly greeting, inquiring about the representative's well-being. The tone is casual and welcoming. The conversation has just begun.",positive
+"Agent: Hello, thanks for calling CloudyBooking. How can I help?
+Customer: Hi — I booked a slot yesterday and payment failed on the site, but my card was charged twice.
+Agent: I'm sorry to hear that. Did you get a payment confirmation email?
+Customer: No, I didn't and support hasn't responded. I'm frustrated and need a refund.
+Agent: I'll escalate this immediately and ensure a refund is processed.
+Customer: Thank you.
+",A customer called CloudyBooking due to a payment issue where their card was charged twice despite the site indicating a failed payment. The customer did not receive a payment confirmation email and was frustrated with the lack of response from support. The agent offered to escalate the issue and process a refund.,negative
