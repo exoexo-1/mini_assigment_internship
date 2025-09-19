@@ -23,7 +23,7 @@ A small web app built for the Groq internship challenge. It accepts a customer s
    ```bash
    git clone https://github.com/exoexo-1/mini_assigment_internship.git
    cd mini_assigment_internship
-````
+``
 
 2. **Install dependencies**
 
