@@ -1,5 +1,5 @@
 
-````markdown
+
 # Mini Assignment — Call Transcript Analyzer
 
 A small web app built for the Groq internship challenge. It accepts a customer service call transcript, uses Groq’s LLM API to produce a summary and sentiment, shows the result in a browser, and saves it in a CSV file.
@@ -67,7 +67,7 @@ A small web app built for the Groq internship challenge. It accepts a customer s
 
 ## ⚙️ Model / Variants
 
-* Current model used is: `llama-3.1-8b-instant` (or whatever you set)
+* Current model used is: `llama-3.3-70b-versatile`
 * You may try other Groq models for comparison (e.g. larger/smaller, more context, or tool-use variants) depending on performance & cost.
 
 ---
@@ -117,19 +117,9 @@ When recording your video demo, you might cover:
 
 ## 👤 Author
 
-* **Your Name** — (you can put your name here)
+* **Your Name** — Lakshya Agrawal
 * GitHub: [exoexo-1](https://github.com/exoexo-1)
 
 ---
 
-## 📄 License
 
-This project is for learning / demo / internship submission purposes. Feel free to reuse or modify.
-
-```
-
----
-
-If you want, I can also generate a more minimal README (just 1-page) or add badges (Python version, build status) if you're using CI. Do you want that?
-::contentReference[oaicite:0]{index=0}
-```
